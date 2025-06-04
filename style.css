@@ -1,66 +1,98 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oleo+Script:wght@400;700&display=swap');
 
 
 body {
     font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
     font-style: normal;
-    background-color: greenyellow
+    background: linear-gradient(135deg, #FF9F00, #F4631E);
+    box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
-
 }
 
-header {
-    background-color: white;
-    min-width: 30vw;
-    height: 100vh;
-    margin-bottom: 2rem;
-    box-sizing: border-box;
-
-
+.container {
+    width: 80%;
+    height: 80vh;
+    padding: min(5rem, 8%);
+    background-color: red;
+    padding: min(5rem, 8%);
+    margin-top: 5rem;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    box-shadow: black 0px 0px 10px;
 }
 
-header img {
-    width: 10rem;
-    height: 10rem;
-    margin-right: 4rem;
+.profile img {
+    width: 3rem;
     background-color: white;
     border-radius: 50%;
-    border: .2rem solid black;
+    border: .2px solid black;
 }
 
 
 .profile {
-    height: 10rem;
-    width: 100%;
-    margin-top: 2rem;
+    width: 80%;
+    padding: 1rem;
+    border-bottom: 2px solid black;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: auto;
+
+}
+
+.container .profile h1 {
+    font-family: "Oleo Script";
+    font-size: clamp(2rem, 1vw, 1rem);
+    font-style: normal;
+    text-align: center;
+
+}
+
+.data {
+    display: inline-block;
+    font-size: 1rem;
+    margin: 2rem 3rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.inputContainer {
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
-header .profile h1 {
-    font-family: "bebas Neue";
-    font-size: 5rem;
-    font-style: normal;
-    letter-spacing: 2px;
-
+.inputContainer input {
+    width: 50%;
+    padding: 1rem;
+    margin-right: 2rem;
+    border-radius: 8px;
+    background-color: white;
 }
 
-header .data {
-    display: inline-block;
-    font-size: 2rem;
-    margin: 2rem 3rem;
-    text-align: center;
+.inputContainer input[type='text'] {
+    color: rgba(#000, #000, #000; .1);
+    
 }
 
-input{
+button {
+    background-color: blue;
+    padding: 1rem;
+    color: white;
+    border-radius: 10px;
 }
 
 
 /* responsive */
-@media 
+@media(max-width:700px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .img {}
+}
