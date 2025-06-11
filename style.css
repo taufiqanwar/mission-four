@@ -4,24 +4,40 @@
 body {
     font-family: "Bebas Neue", sans-serif;
     font-style: normal;
-    background: linear-gradient(135deg, #FF9F00, #F4631E);
+    background: linear-gradient(135deg, #deddda, #b4b4b4);
     box-sizing: border-box;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-attachment: fixed;
 }
 
 .container {
     width: 80%;
-    height: 80vh;
+    max-width: 29rem;
+    height: 90vh;
     padding: min(5rem, 8%);
-    background-color: red;
+    background-color: white;
     padding: min(5rem, 8%);
-    margin-top: 5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     align-items: center;
     justify-content: center;
     border-radius: 30px;
     box-shadow: black 0px 0px 10px;
+}
+
+
+.profile {
+    width: 80%;
+    padding: 1rem;
+    border-bottom: 3px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: auto;
+
 }
 
 .profile img {
@@ -32,66 +48,150 @@ body {
 }
 
 
-.profile {
-    width: 80%;
-    padding: 1rem;
-    border-bottom: 2px solid black;
+.container .profile h1 {
+    font-family: "Bebas Neue";
+    font-size: clamp(2rem, 27vw, 1rem);
     display: flex;
     align-items: center;
-    gap: 1rem;
-    margin: auto;
-
-}
-
-.container .profile h1 {
-    font-family: "Oleo Script";
-    font-size: clamp(2rem, 1vw, 1rem);
+    justify-content: center;
     font-style: normal;
     text-align: center;
-
+    color: black;
 }
 
 .data {
-    display: inline-block;
+    width: 17rem;
     font-size: 1rem;
     margin: 2rem 3rem;
+    margin: 2rem auto;
     text-align: center;
     display: flex;
     align-items: center;
+    justify-content: center;
+    color: black;
 }
-
-.inputContainer {
+.todo-app {
     font-family: Arial, Helvetica, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.inputContainer input {
-    width: 50%;
-    padding: 1rem;
-    margin-right: 2rem;
-    border-radius: 8px;
     background-color: white;
+    border-radius: 30px;
+    border: 1px solid #3e3e3e;
+    box-sizing: border-box;
 }
 
-.inputContainer input[type='text'] {
-    color: rgba(#000, #000, #000; .1);
-    
+#todo-input {
+    width: 15rem;
+    padding: 1rem;
+    margin: auto;
+    margin-right: .5rem;
+    border-radius: 8px;
 }
+
+.todo-app input::placeholder {
+
+color: rgba(0, 0, 0, .4)
+}
+
 
 button {
     background-color: blue;
     padding: 1rem;
     color: white;
-    border-radius: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    font-family: 'Bebas Neue';
+    font-size: 2rem;
+    padding: 1rem;
+    user-select: none;
+    position:relative;
+    cursor: pointer;
+}
+
+.stats {
+    width: 21rem;
+    height: ;
+    margin: auto;
+    padding: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8rem;
+    /* background-color: #b4b4b4; */
+}
+
+.stats span{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    background-color: white;
+    
+}
+
+.stats button{
+background-color: red;
+height: 1rem;
+width: 10rem;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+ul li::before{
+    content:'';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 30px;
+
+}
+
+ul li.checked{
+    color: ;
+    text-decoration: ;
+}
+
+ul li.checked::before{
+
+
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    color: aqua;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50px;
+}
+
+
+ul li span:hover{
+
+    background-color: red;
 }
 
 
 /* responsive */
-@media(max-width:700px) {
+@media(max-width:600px) {
     .container {
-        padding: 1rem;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        border-radius: 0px;
     }
 
     .img {}
