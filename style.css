@@ -1,198 +1,147 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oleo+Script:wght@400;700&display=swap');
+@import url();
 
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 
 body {
-    font-family: "Bebas Neue", sans-serif;
-    font-style: normal;
-    background: linear-gradient(135deg, #deddda, #b4b4b4);
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-attachment: fixed;
+    background-color: #f5f5f5;
+    padding: 20px;
 }
 
 .container {
-    width: 80%;
-    max-width: 29rem;
-    height: 90vh;
-    padding: min(5rem, 8%);
+    max-width: 600px;
+    margin: 0 auto;
     background-color: white;
-    padding: min(5rem, 8%);
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    align-items: center;
-    justify-content: center;
-    border-radius: 30px;
-    box-shadow: black 0px 0px 10px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
-
-.profile {
-    width: 80%;
-    padding: 1rem;
-    border-bottom: 3px solid black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin: auto;
-
-}
-
-.profile img {
-    width: 3rem;
-    background-color: white;
-    border-radius: 50%;
-    border: .2px solid black;
-}
-
-
-.container .profile h1 {
-    font-family: "Bebas Neue";
-    font-size: clamp(2rem, 27vw, 1rem);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-style: normal;
-    text-align: center;
-    color: black;
-}
-
-.data {
-    width: 17rem;
-    font-size: 1rem;
-    margin: 2rem 3rem;
-    margin: 2rem auto;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: black;
-}
-.todo-app {
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    border-radius: 30px;
-    border: 1px solid #3e3e3e;
-    box-sizing: border-box;
-}
-
-#todo-input {
-    width: 15rem;
-    padding: 1rem;
-    margin: auto;
-    margin-right: .5rem;
-    border-radius: 8px;
-}
-
-.todo-app input::placeholder {
-
-color: rgba(0, 0, 0, .4)
-}
-
-
-button {
-    background-color: blue;
-    padding: 1rem;
-    color: white;
-    border-radius: 30px;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-ul li{
-    list-style: none;
-    font-family: 'Bebas Neue';
-    font-size: 2rem;
-    padding: 1rem;
-    user-select: none;
-    position:relative;
-    cursor: pointer;
-}
-
-.stats {
-    width: 21rem;
-    height: ;
-    margin: auto;
-    padding: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8rem;
-    /* background-color: #b4b4b4; */
-}
-
-.stats span{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.container img{
     width: 5rem;
-    background-color: white;
-    
+    display: flex;
+    margin: auto;
+    padding-bottom: 2rem;
 }
 
-.stats button{
-background-color: red;
-height: 1rem;
-width: 10rem;
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+.container p{
 display: flex;
 align-items: center;
 justify-content: center;
+margin-bottom: 30px;
 }
 
-ul li::before{
-    content:'';
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    border-radius: 30px;
-
+.input-container {
+    display: flex;
+    margin-bottom: 20px;
+    gap: 10px;
 }
 
-ul li.checked{
-    color: ;
-    text-decoration: ;
+#todo-input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-ul li.checked::before{
-
-
+#add-btn {
+    padding: 12px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
-ul li span {
-    position: absolute;
-    right: 0;
-    width: 40px;
-    height: 40px;
-    font-size: 20px;
-    color: aqua;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 50px;
+#add-btn:hover {
+    background-color: #45a049;
 }
 
-
-ul li span:hover{
-
-    background-color: red;
+#todo-list {
+    list-style-type: none;
 }
 
+.todo-item {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: all 0.3s;
+}
 
-/* responsive */
-@media(max-width:600px) {
-    .container {
-        width: 100vw;
-        height: 100vh;
-        margin: 0;
-        border-radius: 0px;
-    }
+.todo-item:hover {
+    background-color: #f0f0f0;
+}
 
-    .img {}
+.todo-item.completed {
+    opacity: 0.7;
+}
+
+.todo-item.completed .task-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.task-checkbox {
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.task-text {
+    flex: 1;
+    font-size: 16px;
+}
+
+.delete-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 6px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #ff1a1a;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+#clear-all {
+    padding: 8px 15px;
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#clear-all:hover {
+    background-color: #ff1a1a;
 }
